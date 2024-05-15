@@ -40,15 +40,23 @@ This Python package provides implementations of three metaheuristic algorithms t
    ```
 
 2. Read a TSP instance from a file using the provided utility functions:
-   ```python
-    tspHC.read_routes_from_file('file.txt')
-    tspSA.read_routes_from_file('file.txt')
-    tspAC.read_routes_from_file('file.txt')
-    #OR
-    tspHC.read_routes_from_list([[x1, y1], [x2, y2]])
-    tspSA.read_routes_from_list([[x1, y1], [x2, y2]])
-    tspAC.read_routes_from_list([[x1, y1], [x2, y2]])
-   ```
+
+```python
+# file.txt should look something like this
+   city_index   x_coordinate   y_coordinate
+    0             500.0          300.0
+```
+
+```python
+ tspHC.read_routes_from_file('file.txt')
+ tspSA.read_routes_from_file('file.txt')
+ tspAC.read_routes_from_file('file.txt')
+ #OR
+ tspHC.read_routes_from_list([[x1, y1], [x2, y2]])
+ tspSA.read_routes_from_list([[x1, y1], [x2, y2]])
+ tspAC.read_routes_from_list([[x1, y1], [x2, y2]])
+```
+
 3. Apply the chosen algorithm(s) to solve the TSP:
    ```python
    solution_hc, shortest_path_hc = tspHC.steepest_ascent()
